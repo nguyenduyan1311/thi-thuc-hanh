@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let arr = [1,2,3,4,5];
+let x = +prompt('Nhập số');
+function tryRemoveFromArray(x) {
+    for (let i = 0;i<arr.length;i++) {
+        if (arr[i]==x) {
+            arr.splice(x);
+        }
+    }
+    arr.toString();
+    return arr;
+}
+alert(tryRemoveFromArray(x));
+</script>
+</body>
+</html>

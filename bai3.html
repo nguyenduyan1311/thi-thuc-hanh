@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let x = +prompt('Nhập số');
+    let temp, b = 0;
+    let a = 1;
+    let flag;
+    function isFibonacci(x) {
+        while (x > 0) {
+            flag = true;
+            temp = a;
+            a += b;
+            b = temp;
+            arr.push(temp);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == x)
+                    return true;
+                }
+            }
+    }
+    alert(isFibonacci(x));
+</script>
+</body>
+</html>

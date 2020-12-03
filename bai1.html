@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diem = [10,9,8,7,6];
+    let max = findMax(diem);
+    function findMax(diem) {
+        for (let i=0;i<diem.length;i++) {
+            let max = diem[0];
+            if (diem[i]>=max) {
+                max = diem[i];
+                alert('Điểm cao nhất là: '+max);
+            }
+        }
+        return max;
+    }
+    alert(findMax(diem));
+</script>
+</body>
+</html>
