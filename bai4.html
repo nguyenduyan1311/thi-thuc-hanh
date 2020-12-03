@@ -5,22 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="myCanvas"></canvas>
+<canvas id="myCanvas" width="200px" height="200px" style="border: 1px solid black"></canvas>
 <script>
-    function Circle(x,y,radius,color) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.color = color;
+    class Circle {
+        constructor(x,y,radius,color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+        render(canvas) {
+            let context = canvas.getContext('2d');
+            context.beginPath();
+            context.fillStyle = this.color;
+            context.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            context.fill();
+            context.closePath();
+        }
     }
-    function createCircle() {
-        let ctx = document.getElementById('myCanvas').getContext('2d');
-        let circle = new Circle(10,10,100,'#00000',);
-        ctx.beginPath();
-        ctx.arc(circle.x,circle.y,circle.radius,0,2*Math.PI);
-        ctx.fill();
+    function drawCircle(canvas) {
+        let circle = new Circle(10,10,100,'#000000');
+        circle.render(canvas);
     }
-    createCircle();
+    let canvas = document.getElementById('myCanvas');
+    drawCircle(canvas);
 </script>
 </body>
 </html>
