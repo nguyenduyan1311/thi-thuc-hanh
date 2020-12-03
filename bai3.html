@@ -6,23 +6,20 @@
 </head>
 <body>
 <script>
-    let arr = [];
-    let x = +prompt('Nhập số');
-    let temp, b = 0;
-    let a = 1;
-    let flag;
+    let x = +prompt('Nhập x');
     function isFibonacci(x) {
-        while (x > 0) {
-            flag = true;
+        let temp, b = 0;
+        let a = 1;
+        while (true) {
             temp = a;
             a += b;
             b = temp;
-            arr.push(temp);
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == x)
-                    return true;
-                }
+            if (x == temp) {
+                return true;
+            } else if (x<temp) {
+                return false;
             }
+        }
     }
     alert(isFibonacci(x));
 </script>
