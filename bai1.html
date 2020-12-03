@@ -6,19 +6,18 @@
 </head>
 <body>
 <script>
-    let diem = [10,9,8,7,6];
-    let max = findMax(diem);
-    function findMax(diem) {
-        for (let i=0;i<diem.length;i++) {
-            let max = diem[0];
-            if (diem[i]>=max) {
-                max = diem[i];
+    let score = [9,8,7,6,10];
+    function findMax(score) {
+        let max = score[0];
+        for (let i=0;i<score.length;i++) {
+            if (score[i]>=max) {
+                max = score[i];
                 alert('Điểm cao nhất là: '+max);
             }
         }
         return max;
     }
-    alert(findMax(diem));
+    alert(findMax(score));
 </script>
 </body>
 </html>
