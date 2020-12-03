@@ -6,18 +6,15 @@
 </head>
 <body>
 <script>
-let arr = [1,2,3,4,5];
-let x = +prompt('Nhập số');
-function tryRemoveFromArray(x) {
+let arr = [1,2,2,4,3];
+function tryRemoveFromArray(arr,x) {
     for (let i = 0;i<arr.length;i++) {
-        if (arr[i]==x) {
-            arr.splice(x);
-        }
+        if (arr[i]==x)
+            arr.splice(i,2);
     }
-    arr.toString();
     return arr;
 }
-alert(tryRemoveFromArray(x));
+alert(tryRemoveFromArray(arr,2));
 </script>
 </body>
 </html>
